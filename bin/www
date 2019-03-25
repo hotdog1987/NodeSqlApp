@@ -1,18 +1,18 @@
 #!/usr/bin/env node
-
+'use strict';
 /**
  * Module dependencies.
  */
 
-var app = require('../app');
+var server = require('../dist/server');
 var debug = require('debug')('mernapp:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
-
 var port = normalizePort(process.env.PORT || '3000');
+var app = server.Server.bootstrap().app;
 app.set('port', port);
 
 /**
@@ -87,4 +87,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  console.log('Listening on ' + bind);
 }
