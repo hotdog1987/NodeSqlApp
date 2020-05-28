@@ -17,7 +17,7 @@
     "mysql": "mysqljs/mysql",
     "serve-favicon": "~2.3.2",
     "typescript": "^3.3.3333",
-    "yarn": "^1.13.0"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
